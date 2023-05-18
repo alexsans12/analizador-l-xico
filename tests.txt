@@ -1,0 +1,82 @@
+********** TEST 1 **********
+class MiPrimeraClase args[]:
+    var[]:
+        int $numero1 = 5;
+        int $numero2 = 5.6;
+        float $numero3 = 4.4;
+    end
+
+    main[]:
+        print["Sumar numero1 = 5 y numero2 = 5 es: "];
+        print[call[suma[$numero1, $numero2]]];
+
+        if[$numero1 > $numero2]:
+            print["El numero 1 vale mas que 5 wow"];
+        else:
+            print["numero 1 vale muy pocooo. Menos de cinco"];
+        end_ife
+
+        print["Fin Del Programa"];
+    end
+end_class
+****************************
+
+********** TEST 2 **********
+class MiPrimeraClase args[]:
+    var[]:
+        int $numero1 = 5;
+        int $numero2 = 5;
+    end
+
+
+    function suma [$numero1 , $numero2]_init:
+        return = $numero1 + $numero2;
+    end
+
+    main[]:
+        print["Sumar numero1 = 5 y numero2 = 5 es: "];
+        print[call[suma[$numero1, $numero2]]];
+        print["Cuanto quieres que valga ahora el numero 1? "];
+        input[$numero1];
+
+        print[call[suma[$numero1, $numero2]]];
+
+        if[$numero1 > 5]:
+            print["El numero 1 vale mas que 5 wow"];
+        else:
+            print["numero 1 vale muy pocooo. Menos de cinco"];
+        end_ife
+
+        print["Fin Del Programa"];
+    end
+end_class
+****************************
+
+********** TEST 3 **********
+class MiPrimeraClase args[]:
+    var[]:
+        int $veces =5;
+        int $i =0;
+        int $contador = 0;
+    end
+
+    function repetir[$veces]_init:
+        $contador = 0;
+        for[$i=0 , < $veces]:
+            #Esto es un comentario no hace nada, esto repite hola las veces necesarias
+            print["Holaaa"];
+            $contador = 1+$contador;
+            print[$contador];
+        end_for
+        print["Fin del ciclo for"];
+    end
+
+    main[]:
+        print["Cuantas veces quieres que se repita hola?  "];
+        input[$veces];
+        call[repetir[$veces]];
+
+        print["Fin Del Programa"];
+    end
+end_class
+****************************

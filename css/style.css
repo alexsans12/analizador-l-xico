@@ -26,6 +26,35 @@ body {
 .title {
     margin: 1.8rem 0;
     color: #fff842;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.table {
+    width: 80%;
+    overflow: auto;
+    border-collapse: collapse;
+    max-height: 32rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* This applies to all scrollable containers */
+.table::-webkit-scrollbar {
+    width: 0.8rem;  /* width of the entire scrollbar */
+}
+
+/* This applies to the scrollbar thumb */
+.table::-webkit-scrollbar-thumb {
+    background-color: #1f2739;  /* color of the scroll thumb */
+    border-radius: 0.7rem;  /* roundness of the scroll thumb */
+    border: 2px solid #185875;
+}
+
+/* This applies to the track */
+.table::-webkit-scrollbar-track {
+    background-color:#185875;  /* color of the track */
+    border-radius: 0.7rem;
 }
 
 .container th {
@@ -46,7 +75,7 @@ body {
 .container {
     text-align: left;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: table;
     padding: 0 0 8em 0;
@@ -103,6 +132,13 @@ body {
     }
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+}
+
 .form {
     display: grid;
     place-items: center;
@@ -138,6 +174,12 @@ body {
     -webkit-box-shadow: 0 6px 6px -6px #0e1119;
     -moz-box-shadow: 0 6px 6px -6px #0e1119;
     box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+.form__errors {
+    color: #fb667a;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
 }
 
 .btn {
